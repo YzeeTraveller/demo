@@ -2,29 +2,35 @@
   <div>
     <el-container>
       <!--  头部导航栏  -->
-      <el-header class="nav-header custom-header">
-        <el-row>
-          <el-col :span="8">
-            <div class="nav-title">{{ title }}</div>
-          </el-col>
-          <el-col :span="16" style="text-align:right;">
-            <div class="nav-buttons">
-              <a href="#" class="nav-link">作者：{{ author }}</a>
-              <a href="#" class="nav-link">|</a>
-              <a href="#" class="nav-link">邮箱：{{ email }}</a>
-            </div>
-          </el-col>
-        </el-row>
-        <br/>
-        <el-row type="flex" justify="center" align="middle">
-          <el-col>
-            <span>{{ desc }}</span>
-          </el-col>
-        </el-row>
-      </el-header>
+      <!--      <el-header class="nav-header custom-header">-->
+      <!--        <el-row>-->
+      <!--          <el-col :span="8">-->
+      <!--            <div class="nav-title">{{ title }}</div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :span="16" style="text-align:right;">-->
+      <!--            <div class="nav-buttons">-->
+      <!--              <a href="#" class="nav-link">作者：{{ author }}</a>-->
+      <!--              <a href="#" class="nav-link">|</a>-->
+      <!--              <a href="#" class="nav-link">邮箱：{{ email }}</a>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--        </el-row>-->
+      <!--        <br/>-->
+      <!--        <el-row type="flex" justify="center" align="middle">-->
+      <!--          <el-col>-->
+      <!--            <span>{{ desc }}</span>-->
+      <!--          </el-col>-->
+      <!--        </el-row>-->
+      <!--      </el-header>-->
 
       <!--  主体内容  -->
       <el-main>
+        <!--    标题居中    -->
+        <el-row justify="center">
+          <el-col>
+            <div class="nav-title">{{ title }}</div>
+          </el-col>
+        </el-row>
         <br/>
         <br/>
         <el-divider></el-divider>
@@ -107,14 +113,6 @@
 
       </el-main>
       <el-footer>
-        <el-divider></el-divider>
-        <!--   添加作者 & 联系方式 居中显示    -->
-        <el-row type="flex" justify="center" align="middle">
-          <el-col>
-            <!--     add copyright       -->
-            <span>© 2023 {{ author }}. All rights reserved.</span>
-          </el-col>
-        </el-row>
       </el-footer>
     </el-container>
   </div>
@@ -152,37 +150,37 @@ export default {
         {
           beforeImage: this.getImage('img_1_before.jpg'),
           imagePath: this.getImage('img_1_after.jpg'),
-          text: '滤镜效果1'
+          text: 'Filters can be added to a video as a layer to give it a special look or feel. These can range from simple colour adjustments or brightness enhancements, to more complex and innovative variations such as animations and special effects.'
         },
         {
           beforeImage: this.getImage('img_2_before.jpg'),
           imagePath: this.getImage('img_2_after.jpg'),
-          text: '滤镜效果2'
+          text: 'Portrait filters: These filters are designed to enhance the appearance of people. They can smooth skin, change eye colour and even apply virtual make-up.'
         },
         {
           beforeImage: this.getImage('img_3_before.jpg'),
           imagePath: this.getImage('img_3_after.jpg'),
-          text: '滤镜效果3'
+          text: 'Landscape filters: These filters adjust the colour and brightness of the environment in a video, making it ideal for outdoor shots.'
         },
         {
           beforeImage: this.getImage('img_4_before.jpg'),
           imagePath: this.getImage('img_4_after.jpg'),
-          text: '滤镜效果4'
+          text: 'Atmosphere filters: These filters are designed to give a specific atmosphere or setting to a video, such as a retro look or futuristic ambience.'
         },
         {
           beforeImage: this.getImage('img_5_before.jpg'),
           imagePath: this.getImage('img_5_after.jpg'),
-          text: '滤镜效果5'
+          text: 'Special effects filters: These filters go beyond simple colour adjustments and add animation and graphic effects to the video.'
         },
         {
           beforeImage: this.getImage('img_6_before.jpg'),
           imagePath: this.getImage('img_6_after.jpg'),
-          text: '滤镜效果6'
+          text: 'In addition to the preset filters, Shake allows users to create and save their own custom filters. Users can adjust parameters such as brightness, contrast, saturation and more to create their unique look.'
         },
         {
           beforeImage: this.getImage('img_7_before.jpg'),
           imagePath: this.getImage('img_7_after.jpg'),
-          text: '滤镜效果7'
+          text: 'Many viral trends involve the use of specific filters, which in turn increases their popularity. For example, the time warp scan filter and the inversion filter are both examples of such viral challenges.'
         },
       ],
       modules1: [EffectCoverflow, Pagination, Navigation],
@@ -221,9 +219,11 @@ export default {
 }
 
 .nav-title {
-  font-size: 24px;
+  text-align: center;
+  font-size: 50px;
   color: #000000;
   font-weight: bold;
+  font-family: 'DuoLine', Sans-serif;
 }
 
 .nav-buttons {
@@ -272,7 +272,8 @@ export default {
 }
 
 .show-text {
-  font-size: 65pt;
+  font-size: 20pt;
+  font-family: 'DuoLine', Sans-serif;
 }
 
 .el-footer {
